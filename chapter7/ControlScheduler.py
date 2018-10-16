@@ -23,7 +23,7 @@ class NodeManager(object):
     def start_manager(self, url_q, result_q):
         BaseManager.register('get_task_queue', callable=lambda: url_q)
         BaseManager.register('get_result_queue', callable=lambda: result_q)
-        manager = BaseManager(address=('', 8001), authkey='baike')
+        manager = BaseManager(address=('127.0.0.1', 8001), authkey='baike')
         return manager
 
     def url_manager_proc(self, url_q: Queue, conn_q: Queue, root_url: str):
