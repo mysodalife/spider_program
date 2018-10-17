@@ -23,7 +23,7 @@ class HtmlParser(object):
         new_data = self._get_new_data(page_url, soup)
         return new_urls, new_data
 
-    def _get_new_urls(self, page_url:str, soup:BeautifulSoup):
+    def _get_new_urls(self, page_url: str, soup: BeautifulSoup):
         '''
 
         :param page_url: 页面的url

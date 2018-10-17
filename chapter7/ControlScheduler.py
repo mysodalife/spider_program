@@ -85,7 +85,7 @@ if __name__ == '__main__':
     mainnode = NodeManager()
     manager = mainnode.start_manager(url_q=url_q, result_q=result_q)
     url_manager_proc = Process(target=mainnode.url_manager_proc, args=(
-    url_q, conn_q, 'https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/5162711?fr=aladdin'))
+        url_q, conn_q, 'https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/5162711?fr=aladdin'))
     result_reslove_proc = Process(target=mainnode.result_reslove_proc, args=(result_q, store_q, conn_q))
     store_proc = Process(target=mainnode.result_reslove_proc, args=(store_q,))
     url_manager_proc.start()

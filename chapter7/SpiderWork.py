@@ -6,6 +6,8 @@
 from multiprocessing.managers import BaseManager
 from chapter7.HtmlDownloader import HtmlDownloader
 from chapter7.HtmlParser import HtmlParser
+# import sys
+# sys.setrecursionlimit(2000)
 
 
 class SpiderWork(object):
@@ -13,12 +15,12 @@ class SpiderWork(object):
     def __init__(self):
         BaseManager.register('get_task_queue')
         BaseManager.register('get_result_queue')
-        server_addr = '127.0.0.1'
+        server_addr = '222.199.193.65'
         print('Connect to server %s' % server_addr)
-        self.m = BaseManager(address=(server_addr, 8001), authkey='baike')
+        self.m = BaseManager(address=(server_addr, 8001), authkey='baike'.encode('utf-8'))
         self.m.connect()
         self.task = self.m.get_task_queue()
-        self.result = self.m.get('get_result_queue')
+        self.result = self.m.get_result_queue()
         self.downloader = HtmlDownloader()
         self.parser = HtmlParser()
         print('init finish')
