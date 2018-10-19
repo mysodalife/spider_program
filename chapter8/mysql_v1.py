@@ -7,6 +7,7 @@
 '''
 连接远程主机的上的 Mysql（版本8.0）
 远程主机IP地址：222.199.193.65
+attention： 这里在执行 sql 语句时一定要执行
 '''
 import pymysql.cursors
 
