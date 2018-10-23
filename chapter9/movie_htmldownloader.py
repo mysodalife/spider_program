@@ -8,7 +8,7 @@ import requests
 
 class HtmlDownloader(object):
 
-    def downloader(self, url):
+    def download(self, url):
         if url is None:
             return
         user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
