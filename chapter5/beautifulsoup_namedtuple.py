@@ -19,3 +19,4 @@ with open('qiye.csv', 'r') as f:
     reader = csv.DictReader(f)  # 获取到整个的dict对象
     for line in reader:
         print(line.get('Name'), line.get('Password'))
+
