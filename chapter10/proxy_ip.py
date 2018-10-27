@@ -9,7 +9,7 @@ import json
 
 # 向本地发一个请求 来获取免费获取的 IP地址
 # 书上的代码有落后  github 上的代码
-r = requests.get('http://127.0.0.1:8000/?types=0&count=5&country=国内')
+r = requests.get('http://127.0.0.1:8000/?types=0&count=5&country=国内') # 返回json数据
 ip_ports = json.loads(r.text)
 print(ip_ports)
 ip = ip_ports[0][0] # 更新了 IP 地址
