@@ -2,7 +2,7 @@
 # @Time         : 2018/10/22 11:45
 # @Author       : sodalife
 # @File         : movie_spiderman.py
-# @Description  : 爬虫调度器 这种动态爬取网站的方式 是直接通过 js 来获取的
+# @Description  : 爬虫调度器 这种动态爬取网站的方式 是直接通过 js 来获取的 将得到的js 进行提取
 import time
 from chapter9.movie_dataoutput import DataOutPut
 from chapter9.movie_htmldownloader import HtmlDownloader
