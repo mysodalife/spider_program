@@ -43,7 +43,7 @@ class MyImagePipeline(ImagesPipeline):
         if not image_paths:
             raise DropItem('Item contains no Image')
         item['image_paths'] = image_paths
-        return item # 这里是返回
+        return item # 这里是返回  item
 
     def get_media_requests(self, item, info):
         '''
@@ -53,4 +53,4 @@ class MyImagePipeline(ImagesPipeline):
         :return: 返回整个的 Request
         '''
         for image_url in item['cimage_urls']:
-            yield Request(image_url)
+            yield Request(image_url) # 返回很多 request
