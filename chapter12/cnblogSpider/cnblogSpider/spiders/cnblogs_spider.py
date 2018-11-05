@@ -31,8 +31,8 @@ class CnblogsSpider(scrapy.Spider):
         :return: Request Item 的 可迭代对象
         '''
 
-        # from scrapy.shell import inspect_response
-        # inspect_response(relllponse,self)
+        from scrapy.shell import inspect_response
+        inspect_response(response,self)
 
         papers = response.xpath('.//*[@class="day"]')
         for paper in papers:
